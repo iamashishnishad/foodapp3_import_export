@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/nav.css">
+
+  </head>
+  <body>
+    <div id="navbar">
+    </div>
+    <h1>Signup page</h1>
+    <form id="signup">
+      <input id="email" type="text" placeholder="Enter email" />
+      <input id="pass" type="password" placeholder="Enter password" />
+      <input id="user" type="text" placeholder="Enter username" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", signUpFun);
+
+  var userData = JSON.parse(localStorage.getItem("userCreds"))||[]
+  function signUpFun() {
+    event.preventDefault();
+
+    var userObj = {
+      email: document.querySelector("#email").value,
+      password: document.querySelector("#pass").value,
+      userName: document.querySelector("#user").value,
+    };
+    //console.log(userObj);
+    userData.push(userObj);
+    //console.log(userData)
+    localStorage.setItem("userCreds",JSON.stringify(userData))
+
+  }
+</script>
+
+<script type="module">
+  
+    import navbar from "./components/nav.js"
+  
+    document.getElementById("navbar").innerHTML=navbar()
+  
+  
+  
+  
+  
+  </script>

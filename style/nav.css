@@ -1,0 +1,30 @@
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
+
+#options{
+    display: flex;
+    gap: 20px;
+    color: white;
+
+}
+
+#login, #signup{
+    display: grid;
+    grid-template-columns: repeat(1, 25%);
+    grid-template-rows: repeat(3, 50px);
+    gap: 30px;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bolder;
+}
+button{
+    height: 40px;
+}

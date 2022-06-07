@@ -1,0 +1,27 @@
+#as{
+    margin-top: 50px;
+    margin-left: 380px;
+  }
+
+  input{
+    height: 40px;
+    width: 30%;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  button{
+    height: 47px;
+    width: 20%;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  #container{
+    margin-top: 30px;
+    justify-content: items;
+    margin-left: 20%;
+  }
+
+  p, p2,p5{
+    font-size: larger;
+    font-weight: bolder;
+  }
